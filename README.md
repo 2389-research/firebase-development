@@ -50,4 +50,8 @@ export const users = {
   - [Firestore Rules Patterns](docs/examples/firestore-rules-patterns.md)
   - [Multi-Hosting Setup](docs/examples/multi-hosting-setup.md)
 
+---
 
+If these Firebase workflows saved you from emulator hell, a ⭐ helps us know it's landing.
+
+Built by [2389](https://2389.ai) · Part of the [Claude Code plugin marketplace](https://github.com/2389-research/claude-plugins)
