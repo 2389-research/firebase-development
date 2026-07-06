@@ -1,6 +1,6 @@
 ---
 name: firebase-development:debug
-description: This skill should be used when troubleshooting Firebase emulator issues, rules violations, function errors, auth problems, or deployment failures. Triggers on "error", "not working", "debug", "troubleshoot", "failing", "broken", "permission denied", "emulator issue".
+description: Systematically troubleshoots Firebase-specific issues including emulator failures, Firestore rules violations, Cloud Functions errors, Firebase Auth problems, and Firebase deploy failures. Use when Firebase emulators won't start, Firestore returns PERMISSION_DENIED, Cloud Functions return errors, Firebase Auth fails in the emulator, or firebase deploy fails.
 ---
 
 # Firebase Debugging
@@ -102,7 +102,7 @@ Watch terminal output while reproducing.
 Check environment variables:
 ```bash
 cat functions/.env
-cat hosting/.env.local  # Should have NEXT_PUBLIC_USE_EMULATORS=true
+cat hosting/.env.local  # Should have NEXT_PUBLIC_USE_EMULATORS=true (Next.js)
 ```
 
 Check emulator connection in client code and API key middleware.
@@ -148,7 +148,7 @@ Verify:
 
 ### Step 10: Document Issue and Solution
 
-Create entry in `docs/debugging-notes.md`:
+Append to the project's debugging notes (e.g. `docs/debugging-notes.md`), creating it if missing:
 - Symptom and exact error message
 - Root cause
 - Solution applied
@@ -164,7 +164,7 @@ Create entry in `docs/debugging-notes.md`:
 | Rules not reloading | Restart emulators |
 | Admin vs Client SDK | Admin bypasses rules, client respects them |
 | Missing CORS | Add `app.use(cors({ origin: true }))` |
-| Emulator connection | Set `NEXT_PUBLIC_USE_EMULATORS=true` |
+| Emulator connection | Set `NEXT_PUBLIC_USE_EMULATORS=true` (Next.js) |
 | API key prefix | Verify prefix matches actual keys |
 
 ## Integration with Superpowers

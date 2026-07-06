@@ -1,6 +1,6 @@
 ---
 name: firebase-development:project-setup
-description: This skill should be used when initializing a new Firebase project with proven architecture. Triggers on "new firebase project", "initialize firebase", "firebase init", "set up firebase", "create firebase app", "start firebase project". Guides through CLI setup, architecture choices, and emulator configuration.
+description: Initializes new Firebase projects with TypeScript, emulators, authentication, and security rules using proven architecture patterns. Use when starting a new Firebase project, running firebase init, or setting up Firebase for the first time in a repository.
 ---
 
 # Firebase Project Setup
@@ -138,7 +138,7 @@ Create `biome.json` with recommended rules. Run `npm run lint:fix`.
 
 Create `.env.example` template. Copy to `.env` and fill in values.
 
-For hosting: create `hosting/.env.local` with `NEXT_PUBLIC_USE_EMULATORS=true`.
+For Next.js hosting: create `hosting/.env.local` with `NEXT_PUBLIC_USE_EMULATORS=true` (Next.js).
 
 ### Step 12: Initial Git Commit
 
